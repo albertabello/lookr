@@ -335,13 +335,13 @@ LookerSDK <- R6::R6Class(
         config = self$oauthHeader)$content
     },
     
-    runLook = function(lookId, resultFormat = "json") {
+    runLook = function(lookId,limit, resultFormat = "json") {
       self$refresh()
       
       httr::content(self$userSession$apiClient$callApi(
         url = paste0(self$userSession$apiClient$basePath,
                      "/looks/", lookId,
-                     "/run/", resultFormat),
+                     "/run/", resultFormat,"?limit=",limit),
         queryParams = NULL,
         headerParams = NULL,
         method = "GET",
