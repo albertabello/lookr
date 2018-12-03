@@ -336,7 +336,7 @@ LookerSDK <- R6::R6Class(
     },
     
     runLook = function(lookId,
-                       limit = -1, 
+                       limit = 500, 
                        resultFormat = "json") {
       self$refresh()
       
