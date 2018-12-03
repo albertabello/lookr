@@ -23,7 +23,7 @@ Install
 Use `devtools` to install from this repository:
 
 ``` r
-devtools::install_github("looker/lookr")
+devtools::install_github("albertabello/lookr")
 library(lookr)
 ```
 
